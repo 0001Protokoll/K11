@@ -1,53 +1,34 @@
-\input{usepackage.tex}
-
-\begin{document}
-
+%\input{usepackage.tex}
+%\begin{document}
+\setlength\abovedisplayshortskip{20pt}
+\setlength\belowdisplayshortskip{20pt}
+\setlength\abovedisplayskip{20pt}
+\setlength\belowdisplayskip{20pt}
 \section{Theoretische Grundlagen}
-
-Die molekulare Diffusion durch einen Querschnitt wird durch das $1.$ Ficksche Gesetz \ref{eq:fickgesetz} ausgedrückt. Hierbei wird das  statistische Mittel der gerichteten Teilchenbewegung durch den Fluss der Teilchen beschrieben. Im vorliegenden Fall betrachtet man die klassische Ficksche Diffusion, da hier von der Verwendung unterschiedlicher Isotope und großer apparativer Aufbauten wie z.B. einem NMR abgesehen werden kann.
-
-
- Wobei $J$ der Stofftransport, $A$ die Fläche, durch die der Strofftransport erfolgt, $n$ die Stoffmenge, $t$ die Zeit, $c$ die Konzentration, $z$ die Länge des Gradienten und $D$ der Diffusionskoeffizient sind.
-
-\begin {equation}
+Die molekulare Diffusion entlang eines Gradienten wird durch das erste Ficksche Gesetz \ref{eq:fickgesetz} ausgedrückt. Hierbei wird das statistische Mittel der gerichteten Teilchenbewegung durch den Fluss der Teilchen beschrieben. Im vorliegenden Fall betrachtet man die klassische Ficksche Diffusion. 
+\begin{equation}
 J=\frac{1}{A}\frac{dn}{dt}=-D\frac{dc}{dz}
 \label{eq:fickgesetz}
-\end {equation}
-
-
-
-Der Stofftransport wird in einem Stefan-Rohr gemessen, welches so aufgebaut ist, dass an ein temperiertes Rohr mit einem konstanten Gasfluss im rechten Winkel ein Rohr angeschlossen ist in dem sich die zu untersuchende Flüssigkeit befindet. Direkt oberhalb des Flüssigkeitsspiegels ist die Konzentration gleich dem Sättigungsdampfdruck und dort wo die Rohre ineinander gehen gleich Null, da das Isopentan durch den Luftstrom sofort weggespült wird. Dies erzeugt den Partialdruckgradienten.
-
+\end{equation}
+Wobei $J$ der Stofftransport, $A$ die Fläche, durch die der Strofftransport erfolgt, $n$ die Stoffmenge, $t$ die Zeit, $c$ die Konzentration, $z$ die Länge des Gradienten und $D$ der Diffusionskoeffizient sind. Der Stofftransport wird in einem Stefan-Rohr gemessen, welches so aufgebaut ist, dass an ein temperiertes Rohr mit einem konstanten Gasfluss im rechten Winkel ein Rohr angeschlossen ist, in dem sich die zu untersuchende Flüssigkeit befindet. Direkt oberhalb des Flüssigkeitsspiegels ist der Partialdruck des Isopentan gleich dem Sättigungsdampfdruck, dort wo die Rohre ineinander gehen ist der Partialdruck Null, da das gesamte Isopentan durch den Luftstrom sofort abtransportiert wird. Dies erzeugt den Partialdruckgradienten.\\
+\\
 Durch das Verdampfen der Flüssigkeit sinkt der Flüssigkeitsspiegel und steigt die Länge des Gradienten. Da die beiden Partialdrücke jedoch konstant bleiben sinkt somit der Gradient.  Es gilt für den Diffusionskoeffizienten in Abhängigkeit zum Füllstand des Röhrchens Gleichung \ref{eq:diffkonst}
-
-\begin {equation}
+\begin{equation}
 D_{AB}=-\frac{RT\rho_A}{2p^0M_A}\cdot\frac{z^2-{z_0}^2}{t} \cdot\left[ln\left(1-\frac{p^D}{p^0}\right)\right]^{-1}
 \label{eq:diffkonst}
 \end{equation}
-
-Hierbei ist $R$ die allgemeine Gaskonstante, $T$ die Temperatur, $\rho_A$ die Dichte der zu untersuchenden Substanz, $p^0$ der äußere Druck, $M_A$ die molare Masse, $z$ die Länge des Gradienten zum Zeitpunkt $t$ und $z_0$ die Länge des Gradienten zum Zeitpunkt $t=0$. 
-
-Durch zusammenfassen konstanten Beiträge in Gleichung \ref{eq:diffkonst} in einer Konstante $K$ ergibt sich Gleichung \ref{eq:diffkonstmitk}.
-
-\begin {equation}
-D_{AB}=-K\cdot\frac{z^2-{z_0}^2}{\Delta t} \quad \text{mit} K=\frac{RT\rho_A}{2p^0M_A} \cdot\left[ln\left(1-\frac{p^D}{p^0}\right)\right]^{-1}
+Hierbei ist $R$ die allgemeine Gaskonstante, $T$ die Temperatur, $\rho_A$ die Dichte der zu untersuchenden Substanz, $p^0$ der äußere Druck, $M_A$ die molare Masse, $z$ die Länge des Gradienten zum Zeitpunkt $t$ und $z_0$ die Länge des Gradienten zum Zeitpunkt $t=0$. Durch zusammenfassen der konstanten Beiträge in Gleichung \ref{eq:diffkonst} in $K$ ergibt sich Gleichung \ref{eq:diffkonstmitk}.
+\begin{equation}
+D_{AB}=-K\cdot\frac{z^2-{z_0}^2}{\Delta t} \quad \quad \text{mit :  } K=\frac{RT\rho_A}{2p^0M_A} \cdot\left[ln\left(1-\frac{p^D}{p^0}\right)\right]^{-1}
 \label{eq:diffkonstmitk}
 \end{equation}
-
-Diese kann nun nach $z$ aufgelöst werden.
-
-\begin {equation}
+Diese kann nun nach $z$ aufgelöst werden : 
+\begin{equation}
 z=\sqrt{{z_0}^2-\frac{D_{AB}}{K}\cdot\Delta t} 
 \label{eq:laenge}
 \end{equation}
-
-
-Die Füllhöhe des Flüssigkeitsreservoi ist somit nicht linear von der Zeit abhängig, da sich die Abnahme gemäß der Wurzelfunktion mit der Zeit verlangsamt. Diese Verlangsamung gewinnt mit sinkendem Pegel zunehmend an Bedeutung.
-
-Da K durch den Logarithmus negativ ist steigt z, was bedeutet, dass der Flüssigkeitsstand sinkt, was für einen verdampfenden Stoff zu erwarten ist.
-
-
-
-\end{document}
+\\
+Die Füllhöhe des Flüssigkeitsreservoirs ist folglich nicht linear von der Zeit abhängig, da sich die Abnahme gemäß der Wurzelfunktion mit der Zeit verlangsamt. Diese Verlangsamung gewinnt mit sinkendem Pegel zunehmend an Bedeutung. Da K durch den Logarithmus negativ ist steigt z, was bedeutet, dass der Flüssigkeitsstand sinkt, was für einen verdampfenden Stoff zu erwarten ist.
+%\end{document}
 
 
